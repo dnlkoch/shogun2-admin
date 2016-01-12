@@ -1,9 +1,11 @@
 /**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting causes an instance of this class to be created and
- * added to the Viewport container.
+ * This class is the main view for the application. It is specified in
+ * app.js as the "mainView" property. That setting automatically applies
+ * the "viewport" plugin causing this view to become the body element
+ * (i.e., the viewport).
  *
- * TODO - Replace this content of this view to suite the needs of your application.
+ * TODO - Replace this content of this view to suite the needs of your
+          application.
  */
 Ext.define('ShogunAdmin.view.main.Main', {
     extend: 'Ext.tab.Panel',
@@ -34,7 +36,8 @@ Ext.define('ShogunAdmin.view.main.Main', {
             title: 'Home',
             iconCls: 'x-fa fa-home',
             layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
+            // The following grid shares a store with the classic version's
+            // grid as well!
             items: [{
                 xtype: 'mainlist'
             }]
