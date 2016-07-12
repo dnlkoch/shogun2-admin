@@ -9,11 +9,16 @@ Ext.define('ShogunAdmin.Application', {
     name: 'ShogunAdmin',
 
     stores: [
-        // TODO: add global / shared stores here
+        'NavigationTree',
+        'Application',
+        'Layout',
+        'ApplicationLayout',
+        'AvailableModules',
+        'Language',
+        'MapProjection'
     ],
 
     launch: function () {
-        // TODO - Launch the application
     },
 
     onAppUpdate: function () {

@@ -3,7 +3,7 @@
      * The application's namespace.
      */
     "name": "ShogunAdmin",
-    
+
     /**
      * The version of the application.
      */
@@ -41,16 +41,16 @@
      * The Sencha Framework for this application: "ext" or "touch".
      */
     "framework": "ext",
-    
+
     /**
      * The toolkit to use. Select either "classic" or "modern".
      */
-    
-    
+
+
     /**
      * The name of the theme for this application.
      */
-    
+
     /**
      * The list of required packages (with optional versions; default is "latest").
      *
@@ -61,7 +61,9 @@
      *      ]
      */
     "requires": [
-        "font-awesome"
+        "font-awesome",
+        "ux",
+        "GeoExt"
     ],
 
     /**
@@ -97,7 +99,7 @@
          *      "save": "sass/save.scss"
          *
          */
-         
+
         /**
          * Comma-separated list of files or folders containing extra Sass. These
          * files are automatically included in the Sass compilation. By default this
@@ -233,14 +235,14 @@
     /**
      * Settings specific to modern toolkit builds.
      */
-    "modern": {
-        "js": [
-            // Remove this entry to individually load sources from the framework.
-            {
-                "path": "${framework.dir}/build/ext-modern-all-debug.js"
-            }
-        ]
-    },
+    //"modern": {
+    //    "js": [
+    //        // Remove this entry to individually load sources from the framework.
+    //        {
+    //            "path": "${framework.dir}/build/ext-modern-all-debug.js"
+    //        }
+    //    ]
+    //},
 
     /**
      * List of all CSS assets in the right inclusion order.
@@ -319,13 +321,13 @@
             "type": "yui"
         }
     },
-    
+
     /**
      * Settings specific to testing builds.
      */
     "testing": {
     },
-    
+
     /**
      * Settings specific to development builds.
      */
@@ -368,9 +370,9 @@
      */
     "bootstrap": {
         "base": "${app.dir}",
-        
+
         "manifest": "${build.id}.json",
-        
+
         "microloader": "bootstrap.js",
         "css": "bootstrap.css"
     },
@@ -415,7 +417,7 @@
      *      }
      *
      */
-    
+
     "output": {
         "base": "${workspace.build.dir}/${build.environment}/${app.name}",
         "page": "index.html",
@@ -429,8 +431,8 @@
             "shared": "resources"
         }
     },
-    
-    
+
+
     /**
     * Controls for localStorage caching
     *   "cache": {
@@ -446,12 +448,12 @@
     *       "deltas": "deltas"
     *   }
     */
-    
+
     "cache": {
         "enable": false,
         "deltas": "${build.id}/deltas"
     },
-    
+
 
     /**
      * Used to automatically generate cache.manifest (HTML 5 application cache manifest)
@@ -506,9 +508,9 @@
      * generated inside this directory must be kept intact for proper generation of
      * deltas between updates.
      */
-    
+
     "archivePath": "archive/${build.id}",
-    
+
 
 
     /**
@@ -553,29 +555,29 @@
      *     }
      *
      */
-    
+
     "builds": {
         "classic": {
             "toolkit": "classic",
-            
+
             "theme": "theme-triton",
-            
+
             "sass": {
                 // "save": "classic/sass/save.scss"
             }
-        },
-
-        "modern": {
-            "toolkit": "modern",
-            
-            "theme": "theme-triton",
-            
-            "sass": {
-                // "save": "modern/sass/save.scss"
-            }
         }
+
+        //"modern": {
+        //    "toolkit": "modern",
+        //
+        //    "theme": "theme-triton",
+        //
+        //    "sass": {
+        //        // "save": "modern/sass/save.scss"
+        //    }
+        //}
     },
-    
+
 
     /**
      * Uniquely generated id for this application, used as prefix for localStorage keys.
